@@ -1,3 +1,5 @@
+const { sum } = require('./sum')
+
 describe('add', () =>{
   it('adds stuff', () => {
     expect(1 + 1).toBe(2)
