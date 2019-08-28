@@ -1,0 +1,23 @@
+tenant: scouredimage
+app: demoapp
+service: demo-service
+
+plugins:
+  - '@serverless/enterprise-plugin'
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: us-east-1
+  memorySize: 128
+  timeout: 15
+
+functions:
+  hello:
+    handler: handler.hello
+    
+    events:
+      - http:
+          path: hello
+          method: post
+
