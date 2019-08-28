@@ -37,7 +37,7 @@ module.exports.hello = async (event, context) => {
   //throw new Error('i died')
   //await sleep(3000)
 
-  await allocate(60)
+  //await allocate(60)
 
   return {
     statusCode: 200,
