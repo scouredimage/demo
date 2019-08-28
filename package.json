@@ -4,6 +4,7 @@
   "description": "A project template to get started with Serverless Enterprise",
   "main": "handler.js",
   "scripts": {
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,9 @@
     "url": "https://github.com/serverless/enterprise-template/issues"
   },
   "homepage": "https://github.com/serverless/enterprise-template#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
   "dependencies": {
     "serverless": "^1.50.1"
   }
