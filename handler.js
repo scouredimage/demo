@@ -39,10 +39,11 @@ module.exports.hello = async (event, context) => {
 
   //await allocate(60)
 
+
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Go Serverless!',
+      message: 'Hi Serverless!',
       input: event,
     }),
   };
