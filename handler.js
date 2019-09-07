@@ -43,7 +43,7 @@ module.exports.hello = async (event, context) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'hi summary preview pr build!',
+      message: 'hi summary preview pr build 42!',
       input: event,
     }),
   };
