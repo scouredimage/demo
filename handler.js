@@ -43,7 +43,7 @@ module.exports.hello = async (event, context) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Hi STAGE!',
+      message: 'hi summary metadata!',
       input: event,
     }),
   };
