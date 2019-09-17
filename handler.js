@@ -1,5 +1,6 @@
 'use strict';
 
+const request = require('request')
 const { promisify } = require('util')
 const exec = promisify(require('child_process').exec)
 
@@ -28,6 +29,17 @@ async function allocate(percent) {
   }
 }
 
+async function fortune() {
+  return new Promise((resolve, reject) => {
+    request('https://api.ef.gy/fortune', (error, response, body) => {
+      if (error || (response && response.statusCode !== 200)) {
+        reject(new Error(error || response.statusCode))
+      }
+      resolve(body)
+    })
+  })
+}
+
 module.exports.hello = async (event, context) => {
   //try {
   //  throw new Error('i died')
@@ -43,7 +55,7 @@ module.exports.hello = async (event, context) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'hi summary metadata!',
+      message: await fortune(),
       input: event,
     }),
   };

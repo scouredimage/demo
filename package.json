@@ -20,6 +20,8 @@
   "homepage": "https://github.com/serverless/enterprise-template#readme",
   "devDependencies": {},
   "dependencies": {
+    "@serverless/enterprise-plugin": "^2.0.0-01de3306",
+    "request": "^2.88.0",
     "serverless": "^1.50.1"
   }
 }
