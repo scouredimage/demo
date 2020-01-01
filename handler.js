@@ -70,15 +70,13 @@ module.exports.hello = async (event, context) => {
   //  context.captureError(error)
   //}
   //throw new Error('i died')
-  //await sleep(3000)
-
+  const message = await httpsFortune()
   //await allocate(60)
 
-  const msg = await httpsFortune()
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: msg,
+      message,
       input: event,
     }),
   };
