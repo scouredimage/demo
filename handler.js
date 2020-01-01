@@ -47,15 +47,13 @@ module.exports.hello = async (event, context) => {
   //  context.captureError(error)
   //}
   //throw new Error('i died')
-  //await sleep(3000)
-
+  const message = await fortune()
   //await allocate(60)
-
 
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: await fortune(),
+      message,
       input: event,
     }),
   };
