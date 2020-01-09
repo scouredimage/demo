@@ -64,15 +64,7 @@ async function httpsFortune() {
 }
 
 module.exports.hello = async (event, context) => {
-  //try {
-  //  throw new Error('i died')
-  //} catch (error) {
-  //  context.captureError(error)
-  //}
-  //throw new Error('i died')
   const message = await httpsFortune()
-  //await allocate(60)
-
   return {
     statusCode: 200,
     body: JSON.stringify({
