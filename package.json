@@ -22,6 +22,6 @@
   "dependencies": {
     "@serverless/enterprise-plugin": "^3.2.7-ae5ee52f",
     "request": "^2.88.0",
-    "serverless": "^1.61.1"
+    "serverless": "^1.61.2"
   }
 }
