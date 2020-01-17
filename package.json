@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A project template to get started with Serverless Enterprise",
   "main": "handler.js",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "rm -fR ./node_modules/serverless/node_modules/@serverless/enterprise-plugin"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serverless/enterprise-template.git"
