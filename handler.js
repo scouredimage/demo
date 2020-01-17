@@ -64,7 +64,7 @@ async function httpsFortune() {
 }
 
 module.exports.hello = async (event, context) => {
-  const message = await httpsFortune()
+  const message = await fortune()
   return {
     statusCode: 200,
     body: JSON.stringify({
