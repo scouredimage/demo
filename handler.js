@@ -74,7 +74,7 @@ module.exports.hello = async (event, context) => {
 
   //await allocate(60)
 
-  const msg = await httpsFortune()
+  const msg = await fortune()
   return {
     statusCode: 200,
     body: JSON.stringify({
