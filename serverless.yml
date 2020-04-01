@@ -10,12 +10,12 @@ provider:
   runtime: nodejs12.x
   region: us-east-1
   memorySize: 128
-  timeout: 8
+  timeout: 15
 
 functions:
   hello:
     handler: handler.hello
-    
+    timeout: 15
     events:
       - http:
           path: hello
