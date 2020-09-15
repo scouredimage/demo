@@ -2,8 +2,9 @@ tenant: scouredimage
 app: demoapp
 service: demo-service
 
-plugins:
-  - '@serverless/enterprise-plugin'
+custom:
+  enterprise:
+    logIngestMode: pull
 
 provider:
   name: aws
