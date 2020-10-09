@@ -5,6 +5,7 @@ service: demo-service
 custom:
   region:
     black: us-west-1
+    white: us-east-2
 
 provider:
   name: aws
