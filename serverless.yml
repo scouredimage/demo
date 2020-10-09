@@ -6,6 +6,7 @@ custom:
   region:
     black: us-west-1
     white: us-east-2
+    red: eu-west-1
 
 provider:
   name: aws
