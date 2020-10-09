@@ -70,8 +70,8 @@ module.exports.hello = async (event, context) => {
   //assert.strictEqual(1, 2)
   //await sleep(3000)
   //await allocate()
-  // const message = await fortune()
-  const message = "hello ${context.serverlessSdk.getTransactionId()}"
+  const message = await fortune()
+  //const message = `hello ${context.serverlessSdk.getTransactionId()}`
   return {
     statusCode: 200,
     body: JSON.stringify({

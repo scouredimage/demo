@@ -22,7 +22,6 @@
   "homepage": "https://github.com/serverless/enterprise-template#readme",
   "devDependencies": {},
   "dependencies": {
-    "@serverless/enterprise-plugin": "file:../../../../serverless/enterprise-plugin/dist",
     "request": "^2.88.0"
   }
 }
