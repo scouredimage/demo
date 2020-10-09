@@ -5,6 +5,8 @@ const https = require('https')
 const { promisify } = require('util')
 const exec = promisify(require('child_process').exec)
 
+const assert = require('assert').strict
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -19,14 +21,15 @@ async function usage() {
 
 var arr = []
 async function allocate(percent) {
-  var i = 0
-  while (i < 3) {
+  let i = 0
+  while (true) {
     i++
-    const used = await usage()
-    if (used >= percent) {
+    //const used = await usage()
+    if (percent && used >= percent) {
       break
     }
-    arr.push({buff: Buffer.alloc(1024 * 1024)})
+    //arr.push({buff: Buffer.alloc(20 * 1024 * 1024)})
+    arr.push(i)
   }
 }
 
@@ -64,7 +67,11 @@ async function httpsFortune() {
 }
 
 module.exports.hello = async (event, context) => {
-  const message = await httpsFortune()
+  //assert.strictEqual(1, 2)
+  //await sleep(3000)
+  //await allocate()
+  const message = await fortune()
+  //const message = `hello ${context.serverlessSdk.getTransactionId()}`
   return {
     statusCode: 200,
     body: JSON.stringify({
