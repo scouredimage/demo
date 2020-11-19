@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "A project template to get started with Serverless Enterprise",
   "main": "handler.js",
-  "scripts": {
-    "postinstall": "rm -fR ./node_modules/serverless/node_modules/@serverless/enterprise-plugin"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serverless/enterprise-template.git"
@@ -20,10 +18,10 @@
     "url": "https://github.com/serverless/enterprise-template/issues"
   },
   "homepage": "https://github.com/serverless/enterprise-template#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "serverless": "^1.83.2"
+  },
   "dependencies": {
-    "request": "^2.88.0",
-    "serverless": "^1.61.2",
-    "@serverless/enterprise-plugin": "^3.2.7-ae5ee52f"
+    "request": "^2.88.0"
   }
 }
