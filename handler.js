@@ -71,6 +71,7 @@ module.exports.hello = async (event, context) => {
   //await sleep(3000)
   //await allocate()
   const message = await fortune()
+  console.log(message)
   //const message = `hello ${context.serverlessSdk.getTransactionId()}`
   return {
     statusCode: 200,
